@@ -1,6 +1,7 @@
 <html lang="en">
 <head>
     <% include ../helpers/head %>
+    <% include ../helpers/navbar %>
 </head>
 
 <body>
@@ -9,14 +10,29 @@
   <div class="page-header">
 
   
-    <h1>Tom's first web app</h1>
+    <h1>City, State and Zip Data Entry</h1>
   </div>
 
-  <p>Click on the button for a surprise.</p>
 
-  <button onClick="showPicture()" class="btn btn-dark">Click me</button>
 
-  <div id="image"></div>
+ <h2>To enter new facts for the database, complete the form below:</h2><br>
+  <form onSubmit="handleMessageFormSubmit()" action="#">
+    Enter a new city:
+    <input id="city"><br>
+    Enter the related state: 
+    <input id="state"><br>
+    Enter the related zip code: 
+    <input id="zip"><br>
+    <button>Submit</button>
+  </form><br>
+
+  <h2>This is what has been entered so far:</h2><br>
+
+  <div id="post-listing"></div>
+
+    
+
+  
   
 </body>
 
